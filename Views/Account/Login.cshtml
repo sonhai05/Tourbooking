@@ -1,0 +1,99 @@
+@{
+    ViewData["Title"] = "Login - Tourbooking";
+    Layout = "_LayoutLogin";
+}
+
+<link rel="stylesheet" href="~/css/login.css" />
+
+<div class="login-container">
+    <div class="login-content">
+        <!-- Left Side: Background -->
+        <div class="login-side login-left">
+            <div class="login-overlay">
+                <h1>Voyager</h1>
+                <p>Curating your journey through the world's most atmospheric landscapes.</p>
+                
+                <div class="inspiration">
+                    <p class="quote">"Travel is the only thing you buy that makes you richer."</p>
+                    <div class="author-info">
+                        <img src="https://via.placeholder.com/40" alt="Author" class="author-avatar">
+                        <span>Elena S, Head Curator</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Login Form -->
+        <div class="login-side login-right">
+            <div class="login-form-wrapper">
+                <h2>Welcome back</h2>
+                <p class="subtitle">Please enter your details to access your dashboard.</p>
+
+                <form method="post" action="/Account/Login">
+                    @if (ViewBag.Message != null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewBag.Message
+                        </div>
+                    }
+
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" 
+                               placeholder="e.g. wanderer@voyager.com" required>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="form-group">
+                        <div class="password-header">
+                            <label for="password">Password</label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        <input type="password" id="password" name="password" class="form-control" 
+                               placeholder="••••••••" required>
+                    </div>
+
+                    <!-- Remember Me -->
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Keep me signed in for 30 days</label>
+                    </div>
+
+                    <!-- Sign In Button -->
+                    <button type="submit" class="btn-signin">Sign in to Voyager</button>
+
+                    <!-- Divider -->
+                    <div class="divider">Or continue with</div>
+
+                    <!-- Social Login -->
+                    <div class="social-login">
+                        <a href="#" class="social-btn google-btn">
+                            <img src="https://www.google.com/favicon.ico" alt="Google">
+                            Google
+                        </a>
+                        <a href="#" class="social-btn apple-btn">
+                            <img src="https://www.apple.com/favicon.ico" alt="Apple">
+                            Apple
+                        </a>
+                    </div>
+
+                    <!-- Sign Up Link -->
+                    <p class="signup-link">
+                        Don't have an account? <a href="#">Sign Up</a>
+                    </p>
+                </form>
+
+                <!-- Footer -->
+                <div class="login-footer">
+                    <p>© 2024 The Financial Voyager. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <span>•</span>
+                        <a href="#">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
