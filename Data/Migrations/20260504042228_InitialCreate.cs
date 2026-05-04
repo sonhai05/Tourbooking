@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace Tourbooking.Migrations
+namespace Tourbooking.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitSchema : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

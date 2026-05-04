@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Tourbooking.Migrations
+namespace Tourbooking.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -52,8 +52,6 @@ namespace Tourbooking.Migrations
                     b.HasKey("TourId");
 
                     b.ToTable("Tours");
-
-
                 });
 #pragma warning restore 612, 618
         }

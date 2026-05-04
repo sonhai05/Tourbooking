@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Tourbooking.Models;
 
 public class ApplicationDbContext : DbContext
 {
