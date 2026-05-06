@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,11 @@ namespace Tourbooking.Controllers
         // GET: Tours
         public async Task<IActionResult> Index()
         {
+            if (User?.Identity?.IsAuthenticated == true && User.IsInRole("Admin"))
+            {
+                return RedirectToAction("Tours", "Admin");
+            }
+
             return View(await _context.Tours.ToListAsync());
         }
 
@@ -45,12 +51,14 @@ namespace Tourbooking.Controllers
         }
 
         // GET: Tours/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
         }
 
         // POST: Tours/Create
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("TourId,Name,Location,Price,Description,CategoryId")] Tour tour, IFormFile imageFile)
@@ -95,6 +103,7 @@ namespace Tourbooking.Controllers
         }
 
         // GET: Tours/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -111,6 +120,7 @@ namespace Tourbooking.Controllers
         }
 
         // POST: Tours/Edit/5
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("TourId,Name,Location,Price,Description,ImageUrl,CategoryId")] Tour tour, IFormFile imageFile)
@@ -190,6 +200,7 @@ namespace Tourbooking.Controllers
         }
 
         // GET: Tours/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -208,6 +219,7 @@ namespace Tourbooking.Controllers
         }
 
         // POST: Tours/Delete/5
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

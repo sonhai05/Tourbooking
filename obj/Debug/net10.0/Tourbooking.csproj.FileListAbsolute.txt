@@ -340,3 +340,6 @@ d:\.NET\Tourbooking\Tourbooking\obj\Debug\net10.0\Tourbooking.sourcelink.json
 D:\.NET\Tourbooking\Tourbooking\obj\Debug\net10.0\compressed\9pbxcyr3jw-{0}-gnlruozlqf-gnlruozlqf.gz
 D:\.NET\Tourbooking\Tourbooking\obj\Debug\net10.0\compressed\xjy4rcmiwe-{0}-v8jx8gw0fs-v8jx8gw0fs.gz
 D:\.NET\Tourbooking\Tourbooking\obj\Debug\net10.0\compressed\jfor0cy1s8-{0}-xm8w51i3e7-xm8w51i3e7.gz
+D:\.NET\Tourbooking\Tourbooking\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\.NET\Tourbooking\Tourbooking\obj\Debug\net10.0\compressed\eysr56iitg-{0}-nphhtc7tcd-nphhtc7tcd.gz
+D:\.NET\Tourbooking\Tourbooking\obj\Debug\net10.0\compressed\4sfb4o88fp-{0}-staj7fnqhs-staj7fnqhs.gz

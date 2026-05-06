@@ -24,15 +24,39 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Tours" asp-action="Index">Tours</a>
+                            @if (User?.Identity?.IsAuthenticated == true && User.IsInRole("Admin"))
+                            {
+                                <a class="nav-link text-dark" href="/Admin/Tours">Tours</a>
+                            }
+                            else
+                            {
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Tours" asp-action="Index">Tours</a>
+                            }
                         </li>
+                        @if (User?.Identity?.IsAuthenticated == true && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Dashboard">Admin</a>
+                            </li>
+                        }
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Booking</a>
                         </li>
                     </ul>
                     <div class="d-flex gap-2 align-items-center">
-                        <a class="btn btn-outline-primary btn-sm" href="/Account/Login">Sign In</a>
-                        <a class="btn btn-primary btn-sm" href="/Account/Register">Sign Up</a>
+                        @if (User?.Identity?.IsAuthenticated == true)
+                        {
+                            <span class="small text-muted">@User.Identity.Name</span>
+                            <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-outline-primary btn-sm">Sign Out</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <a class="btn btn-outline-primary btn-sm" href="/Account/Login">Sign In</a>
+                            <a class="btn btn-primary btn-sm" href="/Account/Register">Sign Up</a>
+                        }
                     </div>
                 </div>
             </div>
