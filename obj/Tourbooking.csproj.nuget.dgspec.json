@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.NET\\Tourbooking\\Tourbooking\\Tourbooking.csproj": {}
+    "C:\\Users\\ADMIN\\Documents\\GitHub\\Tourbooking\\Tourbooking.csproj": {}
   },
   "projects": {
-    "D:\\.NET\\Tourbooking\\Tourbooking\\Tourbooking.csproj": {
+    "C:\\Users\\ADMIN\\Documents\\GitHub\\Tourbooking\\Tourbooking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NET\\Tourbooking\\Tourbooking\\Tourbooking.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Tourbooking\\Tourbooking.csproj",
         "projectName": "Tourbooking",
-        "projectPath": "D:\\.NET\\Tourbooking\\Tourbooking\\Tourbooking.csproj",
-        "packagesPath": "C:\\Users\\TGDD\\.nuget\\packages\\",
-        "outputPath": "D:\\.NET\\Tourbooking\\Tourbooking\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Tourbooking\\Tourbooking.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Tourbooking\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\TGDD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
